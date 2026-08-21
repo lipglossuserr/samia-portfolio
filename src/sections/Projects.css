@@ -1,0 +1,17 @@
+.projects {
+    background: #120F17;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 8vw;
+}
+
+.projects-title {
+    color: #a78bfa;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 600;
+    margin-bottom: 40px;
+    font-family: "Consolas", "Courier New", monospace;
+    text-align: center;
+}

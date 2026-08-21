@@ -1,0 +1,100 @@
+.about {
+    background: #120F17;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 80px 0 16px;
+}
+
+.about-columns {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    padding: 0 8vw;
+}
+
+.about-left {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-right {
+    flex: 0 0 320px;   /* photo column width — tune to taste */
+    max-width: 38vw;
+}
+
+.about-title {
+    color: #a78bfa;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 600;
+    margin-bottom: 32px;
+    font-family: "Consolas", "Courier New", monospace;
+}
+
+.about-text p {
+    color: #ffffffd9;
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    line-height: 1.8;
+    max-width: 720px;
+    margin-bottom: 18px;
+}
+
+.about-tech-line {
+    margin-top: 12px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.about-logoloop {
+    margin-top: auto;
+    width: 100%;
+    color: #a78bfa;
+    padding-top: 40px;
+}
+
+/* --- tech logo tooltip --- */
+.tech-logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.tech-logo-name {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: #241d33;
+    color: #e9e2ff;
+    font-size: 0.72rem;
+    font-family: "Segoe UI", sans-serif;
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.tech-logo:hover .tech-logo-name,
+.tech-logo:focus .tech-logo-name,
+.tech-logo:active .tech-logo-name {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* --- stack columns on small screens --- */
+@media (max-width: 820px) {
+    .about-columns {
+        flex-direction: column;
+    }
+    .about-right {
+        flex: none;
+        width: 70%;
+        max-width: 320px;
+        align-self: center;
+    }
+}
