@@ -48,8 +48,9 @@ export default function Hero() {
             </div>
 
             <a
+
                 className="hero-resume-download"
-                href="/Samia_Tasmim_Resume.pdf"
+                href={`${import.meta.env.BASE_URL}Samia_Tasmim_Resume.pdf`}
                 download="Samia_Tasmim_Resume.pdf"
                 aria-label="Download my resume (PDF)"
             >
