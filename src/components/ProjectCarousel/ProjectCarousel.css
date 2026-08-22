@@ -11,7 +11,7 @@
     border-radius: 20px;
     overflow: hidden;
     background: #1a1420;
-    border: 1px solid rgba(180, 151, 207, 0.15);
+    border: 1px solid rgba(255, 179, 222, 0.15);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
@@ -49,7 +49,7 @@
     border-radius: 50%;
     border: none;
     background: rgba(18, 15, 23, 0.5);
-    color: #ffffffcc;
+    color: var(--pink-soft);
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -61,8 +61,8 @@
 }
 
 .pc-arrow:hover {
-    background: #B497CF;
-    color: #120F17;
+    background: var(--pink-mid);
+    color: var(--bg-dark);
 }
 
 .pc-arrow-left {
@@ -84,24 +84,26 @@
 }
 
 .pc-title {
-    color: #ffffff;
+    color: var(--pink-soft);
     font-size: clamp(1.4rem, 2.4vw, 2rem);
     font-weight: 700;
     margin-bottom: 10px;
-    font-family: "Consolas", "Courier New", monospace;
+    font-family: var(--font-display);
 }
 
 .pc-description {
-    color: #ffffffd9;
+    color: var(--pink-soft);
     font-size: 0.95rem;
+    font-family: var(--font-script);
     max-width: 560px;
     margin: 0 auto 10px;
     line-height: 1.5;
 }
 
 .pc-tech {
-    color: #B497CF;
+    color: var(--pink-mid);
     font-size: 0.85rem;
+    font-family: var(--font-script);
     font-weight: 600;
     letter-spacing: 0.03em;
     margin-bottom: 14px;
@@ -114,13 +116,13 @@
 }
 
 .pc-links a {
-    color: #ffffffcc;
+    color: var(--pink-soft);
     font-size: 1.3rem;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .pc-links a:hover {
-    color: #B497CF;
+    color: var(--pink-glow);
     transform: translateY(-2px);
 }
 
@@ -143,13 +145,14 @@
 }
 
 .pc-dot--active {
-    background: #B497CF;
+    background: var(--pink-mid);
     width: 22px;
     border-radius: 4px;
 }
 
 .pc-empty {
-    color: #ffffff88;
+    color: var(--pink-soft);
+    opacity: 0.6;
     text-align: center;
     padding: 60px 0;
 }

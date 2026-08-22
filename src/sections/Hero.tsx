@@ -1,7 +1,8 @@
 import PixelBlast from "../components/PixelBlast/PixelBlast";
+import HeroTimer from "../components/HeroTimer/HeroTimer";
 import { FiMail } from "react-icons/fi";
 import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
-import { heroText } from "../data/hero";
+import { heroName, heroSubtitle } from "../data/hero";
 import "./Hero.css";
 
 const socials = [
@@ -40,8 +41,11 @@ export default function Hero() {
             </nav>
 
             <div className="hero-content">
-                <h1>{heroText}</h1>
+                <h1 className="hero-name">{heroName}</h1>
+                <p className="hero-subtitle">{heroSubtitle}</p>
             </div>
+
+            <HeroTimer />
         </section>
     );
 }

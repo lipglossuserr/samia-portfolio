@@ -1,2 +1,3 @@
-// ✏️ Edit this anytime — shown as the big line on the hero page
-export const heroText = "Hi, I am Samia!";
+// ✏️ Edit these anytime — shown on the hero (first) page
+export const heroName = "Samia Tasmim";
+export const heroSubtitle = "writing that i'll add later";

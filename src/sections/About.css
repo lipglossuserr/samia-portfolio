@@ -1,5 +1,5 @@
 .about {
-    background: #120F17;
+    background: var(--bg-dark);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,21 +20,22 @@
 }
 
 .about-right {
-    flex: 0 0 320px;   /* photo column width — tune to taste */
+    flex: 0 0 320px;
     max-width: 38vw;
 }
 
 .about-title {
-    color: #a78bfa;
+    color: var(--pink-mid);
     font-size: clamp(1.6rem, 3vw, 2.4rem);
     font-weight: 600;
     margin-bottom: 32px;
-    font-family: "Consolas", "Courier New", monospace;
+    font-family: var(--font-display);
 }
 
 .about-text p {
-    color: #ffffffd9;
+    color: var(--pink-soft);
     font-size: clamp(1rem, 1.4vw, 1.15rem);
+    font-family: var(--font-script);
     line-height: 1.8;
     max-width: 720px;
     margin-bottom: 18px;
@@ -42,14 +43,15 @@
 
 .about-tech-line {
     margin-top: 12px;
-    color: #ffffff;
+    color: var(--pink-soft);
+    font-family: var(--font-script);
     font-weight: 500;
 }
 
 .about-logoloop {
     margin-top: auto;
     width: 100%;
-    color: #a78bfa;
+    color: var(--pink-mid);
     padding-top: 40px;
 }
 
@@ -68,9 +70,9 @@
     left: 50%;
     transform: translateX(-50%) translateY(4px);
     background: #241d33;
-    color: #e9e2ff;
+    color: var(--pink-soft);
     font-size: 0.72rem;
-    font-family: "Segoe UI", sans-serif;
+    font-family: var(--font-script);
     padding: 4px 10px;
     border-radius: 6px;
     white-space: nowrap;

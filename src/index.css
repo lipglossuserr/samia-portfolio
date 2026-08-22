@@ -1,3 +1,16 @@
+:root {
+  /* luxury calligraphy fonts */
+  --font-display: 'Beau Rivage', cursive;   /* big swirly script - hero name & section titles */
+  --font-script: 'Meddon', cursive;         /* softer readable script - body text everywhere else */
+
+  /* pastel pink palette */
+  --pink-soft: #ffd9ee;
+  --pink-mid: #ffb3de;
+  --pink-glow: #ff8fd1;
+
+  --bg-dark: #120F17;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +20,8 @@
 html, body, #root {
   width: 100%;
   height: 100%;
-  background: #120F17;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg-dark);
+  font-family: var(--font-script);
+  color: var(--pink-soft);
   overflow-x: hidden;
 }

@@ -3,7 +3,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: #120F17;
+    background: var(--bg-dark);
 }
 
 .hero-bg {
@@ -22,13 +22,13 @@
 }
 
 .hero-socials a {
-    color: #ffffffcc;
+    color: var(--pink-soft);
     font-size: 1.6rem;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .hero-socials a:hover {
-    color: #a78bfa;
+    color: var(--pink-glow);
     transform: translateY(-3px);
 }
 
@@ -37,15 +37,34 @@
     z-index: 1;
     height: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    pointer-events: none; /* lets mouse pass through to the galaxy effect */
+    align-items: flex-start;
+    padding-left: clamp(24px, 8vw, 120px);
+    padding-right: 24px;
+    gap: 10px;
+    pointer-events: none; /* lets mouse pass through to the pixel-blast effect */
 }
 
-.hero-content h1 {
-    color: #fff;
+.hero-name {
+    font-family: var(--font-display);
+    color: var(--pink-soft);
     font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    text-shadow: 0 0 30px rgba(167, 139, 250, 0.4);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.15;
+    text-shadow:
+            0 0 10px rgba(255, 143, 209, 0.55),
+            0 0 30px rgba(255, 143, 209, 0.45),
+            0 0 60px rgba(255, 143, 209, 0.3);
+}
+
+.hero-subtitle {
+    font-family: var(--font-display);
+    color: var(--pink-mid);
+    font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    opacity: 0.9;
+    text-shadow: 0 0 16px rgba(255, 143, 209, 0.3);
 }

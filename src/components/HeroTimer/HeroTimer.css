@@ -1,0 +1,40 @@
+.hero-timer {
+    position: absolute;
+    right: 32px;
+    bottom: 28px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(255, 214, 236, 0.08);
+    border: 1px solid rgba(255, 179, 222, 0.3);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(255, 143, 209, 0.15);
+    pointer-events: auto;
+}
+
+.hero-timer-icon {
+    color: var(--pink-mid);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.hero-timer-text {
+    font-family: var(--font-script);
+    color: var(--pink-soft);
+    font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    text-shadow: 0 0 12px rgba(255, 143, 209, 0.35);
+}
+
+@media (max-width: 640px) {
+    .hero-timer {
+        right: 16px;
+        bottom: 16px;
+        padding: 8px 14px;
+    }
+}
