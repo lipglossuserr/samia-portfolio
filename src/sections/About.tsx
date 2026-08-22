@@ -55,6 +55,7 @@ export default function About() {
                 </div>
 
                 <div className="about-right">
+                    <p className="photo-hint">✦ tap or hover (only if u want) ✦</p>
                     <PhotoCard src={samiaPhoto} alt="Samia" />
                 </div>
             </div>

@@ -6,7 +6,7 @@ import { heroName, heroSubtitle } from "../data/hero";
 import "./Hero.css";
 
 const socials = [
-    { icon: <FiMail />, url: "mailto:samia04t@gmail.com", label: "Email" },
+    { icon: <FiMail />, url: "https://mail.google.com/mail/?view=cm&fs=1&to=samiatasmim@iut-dhaka.edu", label: "Email" },
     { icon: <FaDiscord />, url: "https://discord.com/users/samiatasmim", label: "Discord" },
     { icon: <FaGithub />, url: "https://github.com/lipglossuserr", label: "GitHub" },
     { icon: <FaLinkedin />, url: "https://linkedin.com/in/samia-tasmim-3850aa38a", label: "LinkedIn" },
