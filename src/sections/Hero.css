@@ -12,11 +12,17 @@
     z-index: 0;
 }
 
-.hero-socials {
+.hero-social-bar {
     position: absolute;
     top: 24px;
     right: 32px;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.hero-socials {
     display: flex;
     gap: 20px;
 }
@@ -30,6 +36,124 @@
 .hero-socials a:hover {
     color: var(--pink-glow);
     transform: translateY(-3px);
+}
+
+/* "contact me --->" animated hint, sitting to the left of the social icons */
+.hero-contact-hint {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-body);
+    font-size: clamp(0.75rem, 1.1vw, 0.95rem);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #ffd9ee;
+    white-space: nowrap;
+    text-transform: lowercase;
+    animation: hero-hint-glow 2.6s ease-in-out infinite;
+}
+
+.hero-contact-arrow {
+    display: inline-block;
+    margin-left: 6px;
+    color: #ffd9ee;
+    animation: hero-arrow-slide 1.3s ease-in-out infinite;
+}
+
+@keyframes hero-hint-glow {
+    0%, 100% {
+        text-shadow:
+                0 0 6px rgba(255, 217, 238, 0.45),
+                0 0 14px rgba(255, 217, 238, 0.28);
+        opacity: 0.85;
+    }
+    50% {
+        text-shadow:
+                0 0 12px rgba(255, 217, 238, 0.9),
+                0 0 28px rgba(255, 217, 238, 0.55);
+        opacity: 1;
+    }
+}
+
+@keyframes hero-arrow-slide {
+    0%, 100% {
+        transform: translateX(0);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateX(7px);
+        opacity: 1;
+    }
+}
+
+/* "download resume" widget, centered on the right edge of the hero */
+.hero-resume-download {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    background: rgba(255, 214, 236, 0.08);
+    border: 1px solid rgba(255, 179, 222, 0.3);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(255, 143, 209, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-resume-download:hover {
+    transform: translateY(-50%) scale(1.05);
+    border-color: rgba(255, 217, 238, 0.6);
+    box-shadow: 0 0 32px rgba(255, 143, 209, 0.35);
+}
+
+.hero-resume-text {
+    font-family: var(--font-body);
+    font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #ffd9ee;
+    white-space: nowrap;
+    text-transform: lowercase;
+    animation: hero-hint-glow 2.6s ease-in-out infinite;
+}
+
+.hero-resume-icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-resume-icon {
+    color: #ffd9ee;
+    font-size: 1.15rem;
+    filter: drop-shadow(0 0 6px rgba(255, 217, 238, 0.7));
+    animation: hero-download-bounce 1.6s ease-in-out infinite;
+}
+
+@keyframes hero-download-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-contact-hint {
+        display: none;
+    }
+
+    .hero-resume-download {
+        right: 16px;
+        padding: 10px 16px;
+    }
 }
 
 .hero-content {

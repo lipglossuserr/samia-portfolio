@@ -1,6 +1,6 @@
 import PixelBlast from "../components/PixelBlast/PixelBlast";
 import HeroTimer from "../components/HeroTimer/HeroTimer";
-import { FiMail } from "react-icons/fi";
+import { FiMail, FiDownload } from "react-icons/fi";
 import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import { heroName, heroSubtitle } from "../data/hero";
 import "./Hero.css";
@@ -32,13 +32,32 @@ export default function Hero() {
                 />
             </div>
 
-            <nav className="hero-socials">
-                {socials.map((s) => (
-                    <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
-                        {s.icon}
-                    </a>
-                ))}
-            </nav>
+            <div className="hero-social-bar">
+                <span className="hero-contact-hint" aria-hidden="true">
+                    contact me
+                    <span className="hero-contact-arrow">---&gt;</span>
+                </span>
+
+                <nav className="hero-socials">
+                    {socials.map((s) => (
+                        <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
+                            {s.icon}
+                        </a>
+                    ))}
+                </nav>
+            </div>
+
+            <a
+                className="hero-resume-download"
+                href="/Samia_Tasmim_Resume.pdf"
+                download="Samia_Tasmim_Resume.pdf"
+                aria-label="Download my resume (PDF)"
+            >
+                <span className="hero-resume-text">download resume</span>
+                <span className="hero-resume-icon-wrap">
+                    <FiDownload className="hero-resume-icon" />
+                </span>
+            </a>
 
             <div className="hero-content">
                 <h1 className="hero-name">{heroName}</h1>
