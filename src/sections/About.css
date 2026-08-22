@@ -32,20 +32,29 @@
     font-family: var(--font-display);
 }
 
+
 .about-text p {
     color: var(--pink-soft);
     font-size: clamp(1rem, 1.4vw, 1.15rem);
-    font-family: var(--font-script);
+    font-family: var(--font-body);
     line-height: 1.8;
     max-width: 720px;
     margin-bottom: 18px;
+    text-shadow:
+            0 0 8px rgba(255, 217, 238, 0.6),
+            0 0 20px rgba(255, 217, 238, 0.4),
+            0 0 40px rgba(255, 217, 238, 0.25);
 }
 
 .about-tech-line {
     margin-top: 12px;
     color: var(--pink-soft);
-    font-family: var(--font-script);
+    font-family: var(--font-body);
     font-weight: 500;
+    text-shadow:
+            0 0 8px rgba(255, 217, 238, 0.6),
+            0 0 20px rgba(255, 217, 238, 0.4),
+            0 0 40px rgba(255, 217, 238, 0.25);
 }
 
 .about-logoloop {
@@ -72,7 +81,7 @@
     background: #241d33;
     color: var(--pink-soft);
     font-size: 0.72rem;
-    font-family: var(--font-script);
+    font-family: var(--font-body);
     padding: 4px 10px;
     border-radius: 6px;
     white-space: nowrap;

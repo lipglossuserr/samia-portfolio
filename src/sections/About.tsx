@@ -31,9 +31,10 @@ const techLogos = [
     { node: <TechLogo icon={<SiTypescript />} name="TypeScript" />, title: "TypeScript" },
     { node: <TechLogo icon={<SiReact />} name="React" />, title: "React" },
     { node: <TechLogo icon={<SiVite />} name="Vite" />, title: "Vite" },
-    { node: <TechLogo icon={<SiSpringboot />} name="Spring Boot" />, title: "Spring Boot" },
+
     { node: <TechLogo icon={<SiFirebase />} name="Firebase" />, title: "Firebase" },
     { node: <TechLogo icon={<SiCss />} name="CSS" />, title: "CSS" },
+    { node: <TechLogo icon={<SiSpringboot />} name="Spring Boot" />, title: "Spring Boot" },
 ];
 
 export default function About() {

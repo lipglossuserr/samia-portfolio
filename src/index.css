@@ -1,7 +1,8 @@
 :root {
   /* luxury calligraphy fonts */
-  --font-display: 'Beau Rivage', cursive;   /* big swirly script - hero name & section titles */
-  --font-script: 'Meddon', cursive;         /* softer readable script - body text everywhere else */
+  --font-display: 'Beau Rivage', cursive;   /* big swirly script - hero name & section headings only */
+  --font-script: 'Meddon', cursive;         /* kept in case you want it for a decorative accent somewhere */
+  --font-body: 'Poppins', sans-serif;       /* normal readable font - all paragraph/body/UI text */
 
   /* pastel pink palette */
   --pink-soft: #ffd9ee;
@@ -21,7 +22,7 @@ html, body, #root {
   width: 100%;
   height: 100%;
   background: var(--bg-dark);
-  font-family: var(--font-script);
+  font-family: var(--font-body);
   color: var(--pink-soft);
   overflow-x: hidden;
 }

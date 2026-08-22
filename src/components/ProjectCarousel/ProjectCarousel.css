@@ -94,7 +94,7 @@
 .pc-description {
     color: var(--pink-soft);
     font-size: 0.95rem;
-    font-family: var(--font-script);
+    font-family: var(--font-body);
     max-width: 560px;
     margin: 0 auto 10px;
     line-height: 1.5;
@@ -103,7 +103,7 @@
 .pc-tech {
     color: var(--pink-mid);
     font-size: 0.85rem;
-    font-family: var(--font-script);
+    font-family: var(--font-body);
     font-weight: 600;
     letter-spacing: 0.03em;
     margin-bottom: 14px;
