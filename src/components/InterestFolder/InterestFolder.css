@@ -1,0 +1,188 @@
+.interest-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 420px;
+}
+
+/* click-outside-to-close backdrop */
+.interest-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(18, 15, 23, 0.45);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+    animation: interest-fade-in 0.25s ease both;
+}
+
+@keyframes interest-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* --- the file icon itself --- */
+.interest-file {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 24px;
+}
+
+.interest-file-glow {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 143, 209, 0.4) 0%, rgba(255, 143, 209, 0) 70%);
+    filter: blur(2px);
+    animation: interest-glow-pulse 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes interest-glow-pulse {
+    0%, 100% { opacity: 0.55; transform: translateX(-50%) scale(0.92); }
+    50% { opacity: 1; transform: translateX(-50%) scale(1.08); }
+}
+
+.interest-sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.spark {
+    position: absolute;
+    border-radius: 50%;
+    background: #fff6fb;
+    box-shadow: 0 0 6px 1px rgba(255, 217, 238, 0.9);
+    animation: interest-twinkle 2.4s ease-in-out infinite;
+}
+
+@keyframes interest-twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.4); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
+/* the little folder shape, drawn in CSS - protruding tab + rounded body + pale slot line */
+.interest-file-shape {
+    position: relative;
+    width: 130px;
+    height: 98px;
+    margin-top: 18px; /* room for the tab poking up above the body */
+    border-radius: 4px 14px 14px 14px;
+    background: linear-gradient(155deg, #ffe9f6 0%, #f2c9ec 35%, #cdb8f3 70%, #ffd9ee 100%);
+    box-shadow:
+            0 0 18px rgba(255, 143, 209, 0.45),
+            0 0 40px rgba(255, 143, 209, 0.25);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.interest-file-shape::before {
+    /* the folder tab */
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 8px;
+    width: 56px;
+    height: 22px;
+    border-radius: 10px 14px 0 0;
+    background: linear-gradient(155deg, #ffe9f6 0%, #ddc3f1 100%);
+    box-shadow: 0 0 14px rgba(255, 143, 209, 0.35);
+}
+
+.interest-file-shape::after {
+    /* the pale horizontal slot line, like the reference folder */
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    right: 12px;
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(18, 15, 23, 0.16);
+}
+
+.interest-file:hover .interest-file-shape {
+    transform: scale(1.06);
+}
+
+.interest-file.is-open .interest-file-shape {
+    transform: scale(1.08) rotate(-4deg);
+}
+
+.interest-file-label {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+    color: var(--pink-soft);
+    text-shadow:
+            0 0 8px rgba(255, 217, 238, 0.6),
+            0 0 20px rgba(255, 217, 238, 0.4);
+}
+
+/* --- the ring of interests that fans out around the file --- */
+.interest-ring {
+    --ring-radius: 190px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.interest-ring.is-open {
+    pointer-events: auto;
+}
+
+.interest-bubble {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(255, 214, 236, 0.1);
+    border: 1px solid rgba(255, 179, 222, 0.4);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: var(--pink-soft);
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(255, 143, 209, 0.5);
+    box-shadow: 0 0 16px rgba(255, 143, 209, 0.2);
+    transform: rotate(var(--angle)) translateX(0) rotate(calc(-1 * var(--angle))) translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease;
+}
+
+.interest-ring.is-open .interest-bubble {
+    transform: rotate(var(--angle)) translateX(var(--ring-radius)) rotate(calc(-1 * var(--angle))) translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+@media (max-width: 640px) {
+    .interest-ring {
+        --ring-radius: 118px;
+    }
+    .interest-bubble {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+    }
+}

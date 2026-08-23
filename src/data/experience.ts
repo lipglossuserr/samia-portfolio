@@ -1,0 +1,2 @@
+// ✏️ Edit this anytime — shown under /experience, right side of the interests screen
+export const experienceText = "currently a cs undergrad student who has experience on building projects, problem solving, team work, presentation, public speaking. Open for internship opportunities!";
