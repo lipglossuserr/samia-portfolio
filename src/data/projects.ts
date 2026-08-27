@@ -30,7 +30,7 @@ export const projects: Project[] = [
         description: "will upload soon on git.",
         tech: "React,Springboot.",
         image: `${import.meta.env.BASE_URL}mochi.png`, // ← replace with your real screenshot import
-        github: "https://github.com/lipglossuserr",
+        github: "https://github.com/lipglossuserr/mochi-can-t-study",
     },
     // {
     //     title: "Next Project",
