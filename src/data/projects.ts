@@ -32,6 +32,13 @@ export const projects: Project[] = [
         image: `${import.meta.env.BASE_URL}mochi.png`, // ← replace with your real screenshot import
         github: "https://github.com/lipglossuserr/mochi-can-t-study",
     },
+    {
+        title: "MovieScout\n",
+        description: "My very own 'letterboxd' i guess?.",
+        tech: "JavaFX,mySQL.",
+        image: `${import.meta.env.BASE_URL}movie.png`, // ← replace with your real screenshot import
+        github: "https://github.com/lipglossuserr/MovieScout",
+    },
     // {
     //     title: "Next Project",
     //     description: "One or two sentences about what it does",
